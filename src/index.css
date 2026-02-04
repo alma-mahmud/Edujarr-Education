@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+@theme {
+  --font-saira: "Saira", sans-serif;
+  --font-rowdies: "Rowdies", sans-serif;
+  --font-inter: "Inter", sans-serif;
+  --color-primary: #2aaa94;
+}
+
+/* Custom Container */
+.container {
+  @apply max-w-406 mx-auto px-5;
+}
+
+/* Navbar Menu Styles */
+nav ul li {
+  @apply flex items-center hover:cursor-pointer;
+}
+
+nav ul li a {
+  /* font-saira ব্যবহার করা হয়েছে */
+  @apply text-black hover:text-primary duration-300 font-saira font-medium text-xl flex items-center gap-1;
+}
+
+/* Icons and Dropdown icon colors */
+.nav_menu_icon {
+  @apply text-primary;
+}
+
+nav .nav_search .icon {
+  @apply hover:cursor-pointer hover:text-primary duration-300 text-2xl;
+}
+
+/* Buttons Styles */
+nav .nav_btn button {
+  @apply font-saira font-medium text-xl duration-300 hover:cursor-pointer;
+}
+
+nav .nav_btn .login {
+  @apply hover:text-primary;
+}
+
+nav .nav_btn .signup {
+  @apply bg-linear-to-br from-[#083f9b] to-[#7f56d9] text-white rounded-lg hover:opacity-90;
+}
