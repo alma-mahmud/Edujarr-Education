@@ -35,7 +35,7 @@ const Navbar = () => {
             <FiSearch className="icon" />
           </div>
           <div className="nav_btn capitalize font-medium font-saira text-xl flex items-center">
-            <button className="login py-5 px-9">login</button>
+            <button className="login py-5 px-9 underline">login</button>
             <button className="signup py-5 px-9 bg-linear-to-br from-[#083f9b] to-[#7f56d9] text-white rounded-lg">
               signup
             </button>
@@ -49,15 +49,26 @@ const Navbar = () => {
       </div>
 
       {/* --- Mobile Sidebar Overlay --- */}
-      <div className={`fixed inset-0 z-50 transition-transform duration-500 ${isOpen ? "translate-x-0" : "translate-x-full"}`}>
-        {/* Background Blur Overlay */}
-        <div className="absolute inset-0 bg-black/20" onClick={() => setIsOpen(false)}></div>
+      <div className={`fixed inset-0 z-50 flex justify-end transition-all duration-500 ${isOpen ? "visible opacity-100" : "invisible opacity-0"}`}>
+        
+        {/* Background Blur Overlay (পেছনের ঝাপসা অংশ) */}
+        <div 
+          className="absolute inset-0 bg-black/20 backdrop-blur-sm transition-opacity duration-500" 
+          onClick={() => setIsOpen(false)}
+        ></div>
 
-        {/* Sidebar Content (Screen-shot Style) */}
-        <div className="absolute right-0 top-0 h-full w-[70%] bg-[#6e48ff] p-10 flex flex-col gap-8 shadow-2xl">
-          {/* Close Icon */}
+        {/* মেনু স্লাইডার ডিভ (Sidebar Content) */}
+        <div className={`relative h-full w-[70%] bg-[#6e48ff] p-10 flex flex-col gap-8 shadow-2xl transition-transform duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] ${
+          isOpen ? "translate-x-0" : "translate-x-full"}`}>
+          
+          {/* ক্লোজ আইকন - এটি ট্যাপ করলে সামান্য ঘুরবে */}
           <div className="flex justify-end">
-            <RxCross2 className="text-white text-4xl cursor-pointer" onClick={() => setIsOpen(false)} />
+            <RxCross2 
+              className={`text-white text-4xl cursor-pointer transition-transform duration-500 ${
+                isOpen ? "rotate-0" : "rotate-90"
+              }`} 
+              onClick={() => setIsOpen(false)} 
+            />
           </div>
 
           {/* Menu Links */}
@@ -66,7 +77,7 @@ const Navbar = () => {
               <li key={link} className="border-b border-white/20 pb-4">
                 <a 
                   href="#" 
-                  className="text-white font-saira font-medium text-3xl"
+                  className="text-white font-saira font-medium text-3xl block"
                   onClick={() => setIsOpen(false)}
                 >
                   {link}
