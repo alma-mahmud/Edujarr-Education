@@ -43,3 +43,10 @@ nav .nav_btn .login {
 nav .nav_btn .signup {
   @apply bg-linear-to-br from-[#083f9b] to-[#7f56d9] text-white rounded-lg hover:opacity-90;
 }
+/* Sidebar এর জন্য smooth transition */
+.translate-x-full {
+  transform: translateX(100%);
+}
+.translate-x-0 {
+  transform: translateX(0);
+}
