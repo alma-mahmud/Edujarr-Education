@@ -1,6 +1,4 @@
 import React from 'react';
-
-// ইমেজ ইমপোর্ট (আপনার আগের পাথ অনুযায়ী)
 import banner1 from '../../assets/Images/Banner/amazon.png';
 import banner2 from '../../assets/Images/Banner/amd.png';
 import banner3 from '../../assets/Images/Banner/cisco.png';
@@ -10,18 +8,20 @@ import banner6 from '../../assets/Images/Banner/spotify.png';
 import banner7 from '../../assets/Images/Banner/banner7.png';
 import heroimg from '../../assets/Images/Banner/hero.png';
 import partnerBg from '../../assets/Images/Banner/partnar.png';
+import medal from '../../assets/Images/Banner/medel.png';
+import { IoIosStar } from "react-icons/io";
 
 const Banner = () => {
   return (
     <>
       {/* Hero Section */}
-      <section className="hero bg-gradient-to-bl from-[#04016c] to-[#4a16bd] relative z-10 overflow-hidden pt-20 pb-10 lg:pt-32 lg:pb-20">
+      <section className="hero bg-gradient-to-bl from-[#04016c] to-[#4a16bd] relative z-10 overflow-hidden pt-10 pb-0 lg:pt-0 lg:pb-0">
         <div className="container mx-auto px-4 flex flex-col lg:flex-row items-center relative">
           
           {/* Hero Left Content */}
           <div className="hero_left w-full lg:w-1/2 flex flex-col gap-y-10 lg:gap-y-16 relative z-10 text-center lg:text-left">
             <div className="hero_text text-white">
-              <p className="font-semibold font-saira text-base md:text-lg uppercase tracking-wider mb-4">
+              <p className="font-semibold font-saira text-base md:text-lg uppercase mb-4 tracking-[5px]">
                 Successful coaches are visionaries
               </p>
               <h1 className="font-rowdies text-4xl md:text-6xl lg:text-[70px] xl:text-[80px] leading-tight lg:leading-[1.1]">
@@ -66,16 +66,15 @@ const Banner = () => {
               <div className="main flex flex-col gap-y-2 text-white text-left">
                 <p className="title font-rowdies text-lg">Ronald Richards</p>
                 <h2 className="description font-saira text-sm opacity-90 leading-relaxed">
-                  In a coaching role, you ask the questions and rely more on your staff, who become the experts.
+                  In a coaching role, you ask the questions and rely more on your 
+                  staff, who become the experts, to provide the information.
                 </h2>
                 <div className="rating text-[#81C7A2] flex items-center gap-2">
                   <span className="font-inter font-bold text-xs">4.9</span>
-                  <div className="flex gap-1 text-[10px]">
-                    <i className="fa-solid fa-star"></i>
-                    <i className="fa-solid fa-star"></i>
-                    <i className="fa-solid fa-star"></i>
-                    <i className="fa-solid fa-star"></i>
-                    <i className="fa-solid fa-star"></i>
+                  <div className="flex gap-1">
+                    {[...Array(5)].map((_, index) => (
+                      <IoIosStar key={index} className="text-[12px] text-[#81C7A2]" />
+                    ))}
                   </div>
                 </div>
               </div>
@@ -84,14 +83,14 @@ const Banner = () => {
 
           {/* Hero Right Image */}
           <div className="hero_right w-full lg:w-1/2 mt-12 lg:mt-0 flex justify-center lg:justify-end relative z-10">
-            <div className="w-4/5 lg:w-3/4 overflow-hidden rounded-b-full">
-              <img src={heroimg} alt="hero image" className="w-full h-full object-cover" />
+            <div className="w-4/5 lg:w-3/4 overflow-visible rounded-b-full">
+              <img src={heroimg} alt="hero image" className="w-full h-full object-contain" />
             </div>
           </div>
 
           {/* আর্চ ফ্রেম ইমেজ (banner7) - শুধুমাত্র LG ডিভাইসে দেখা যাবে */}
-          <div className="hidden lg:block absolute left-1/2 -translate-x-1/2 bottom-[-10%] z-0 pointer-events-none opacity-50">
-            <img src={banner7} alt="frame" className="max-w-none lg:w-[100px] xl:w-[280px]" />
+          <div className="hidden lg:block absolute left-1/2 -translate-x-1/2 -bottom-15 z-30 pointer-events-none opacity-50">
+            <img src={banner7} alt="frame" className="max-w-none lg:w-25 xl:w-70" />
           </div>
         </div>
 
@@ -101,30 +100,30 @@ const Banner = () => {
       </section>
 
       {/* Partners Section */}
-      <section className="partner relative z-20 py-16 lg:py-24 overflow-hidden">
+      <section className="partner relative z-20 py-11 lg:py-24 overflow-hidden">
   
-  {/* ব্যাকগ্রাউন্ড ইমেজ লেয়ার */}
-  <div className="absolute inset-0 -z-10">
-    <img 
-      src={partnerBg} 
-      alt="background" 
-      className="w-full h-full object-cover"
-    />
-    {/* ইমেজের ওপর নীলচে আবছা ভাব (Overlay) দেওয়ার জন্য নিচের div টি */}
-    <div className="absolute inset-0 bg-[#084fc7]/80 mix-blend-multiply"></div>
-  </div>
+          {/* ব্যাকগ্রাউন্ড ইমেজ লেয়ার */}
+          <div className="absolute inset-0 -z-10">
+            <img 
+              src={partnerBg} 
+              alt="background" 
+              className="w-full h-full object-cover"
+            />
+            {/* ইমেজের ওপর নীলচে আবছা ভাব (Overlay) দেওয়ার জন্য নিচের div টি */}
+            <div className="absolute inset-0 bg-[#084fc7]/80 mix-blend-multiply"></div>
+          </div>
 
-  <div className="container mx-auto px-4 relative z-20">
-    <div className="flex flex-wrap justify-center items-center gap-10 md:gap-16 lg:gap-32">
-      <img className="h-6 md:h-8 object-contain brightness-0 invert opacity-70 hover:opacity-100 transition duration-300" src={banner1} alt="amazon" />
-      <img className="h-6 md:h-8 object-contain brightness-0 invert opacity-70 hover:opacity-100 transition duration-300" src={banner2} alt="amd" />
-      <img className="h-6 md:h-8 object-contain brightness-0 invert opacity-70 hover:opacity-100 transition duration-300" src={banner3} alt="cisco" />
-      <img className="h-6 md:h-8 object-contain brightness-0 invert opacity-70 hover:opacity-100 transition duration-300" src={banner4} alt="dropcam" />
-      <img className="h-6 md:h-8 object-contain brightness-0 invert opacity-70 hover:opacity-100 transition duration-300" src={banner5} alt="logitech" />
-      <img className="h-6 md:h-8 object-contain brightness-0 invert opacity-70 hover:opacity-100 transition duration-300" src={banner6} alt="spotify" />
-    </div>
-  </div>
-</section>
+          <div className="container mx-auto px-4 relative z-20">
+            <div className="flex flex-wrap justify-center items-center gap-10 md:gap-16 lg:gap-32">
+              <img className="h-6 md:h-8 object-contain brightness-0 invert opacity-70 hover:opacity-100 transition duration-300" src={banner1} alt="amazon" />
+              <img className="h-6 md:h-8 object-contain brightness-0 invert opacity-70 hover:opacity-100 transition duration-300" src={banner2} alt="amd" />
+              <img className="h-6 md:h-8 object-contain brightness-0 invert opacity-70 hover:opacity-100 transition duration-300" src={banner3} alt="cisco" />
+              <img className="h-6 md:h-8 object-contain brightness-0 invert opacity-70 hover:opacity-100 transition duration-300" src={banner4} alt="dropcam" />
+              <img className="h-6 md:h-8 object-contain brightness-0 invert opacity-70 hover:opacity-100 transition duration-300" src={banner5} alt="logitech" />
+              <img className="h-6 md:h-8 object-contain brightness-0 invert opacity-70 hover:opacity-100 transition duration-300" src={banner6} alt="spotify" />
+            </div>
+          </div>
+    </section>
     </>
   );
 };

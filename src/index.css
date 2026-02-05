@@ -6,7 +6,6 @@
   --font-inter: "Inter", sans-serif;
   --color-primary: #2aaa94;
 }
-
 /* Custom Container */
 .container {
   @apply max-w-406 mx-auto px-5;
