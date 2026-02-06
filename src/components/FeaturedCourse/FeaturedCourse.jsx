@@ -63,7 +63,7 @@ function FeaturedCourse() {
     <section className='bg-[linear-gradient(180deg,#D9ECFF_0%,#F0F3FF00_70%)] py-10 lg:py-30'>
         <div className="container">
             <h3 className='text-[#323232] text-[45px] font-rowdies leading-17.5 font-normal tracking-[-3px] text-center pb-12'>Featured <span className='text-[#2AAA94]'>Course</span></h3>
-            <p className='text-[16px] sm:text-[20px] lg:text-[25px] text-[#4E596B] leading-relaxed lg:leading-8.75 font-saira text-center mx-auto w-full md:w-3/4 lg:w-[690px] pb-10 lg:pb-23'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod temporidunt ut labore veniam...</p>
+            <p className='text-[16px] sm:text-[20px] lg:text-[25px] text-[#4E596B] leading-relaxed lg:leading-8.75 font-saira text-center mx-auto w-full md:w-3/4 lg:w-172.5 pb-10 lg:pb-23'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod temporidunt ut labore veniam...</p>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-11">
                 {
                     work.map(item => (
