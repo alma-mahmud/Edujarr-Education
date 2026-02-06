@@ -48,7 +48,7 @@ function TopCategories() {
 
   return (
     <>
-      <section className='bg-gradient-to-br from-[#D9ECFF] from-0% to-[#7F56D9] pt-20'>
+      <section className='bg-gradient-to-b from-white to-[#D9ECFF] pb-20 pt-20'>
         <div className='text-center'>
           <h3 className='text-3xl sm:text-4xl md:text-[45px] text-[#323232] font-rowdies font-bold leading-7.5 sm:leading-14 md:leading-15 text-center pb-4 sm:pb-6 md:pb-7 px-4'>
             Top <span className='text-[#2AAA94]'>Categories</span>
@@ -62,14 +62,14 @@ function TopCategories() {
                 categories.map((category) => (
                   <div
                     key={category.id}
-                    className="bg-white rounded-[20px] pt-[37px] px-[30px] pb-[47px] hover:scale-105 transition-transform duration-300 text-center"
+                    className="bg-white rounded-[20px] pt-9.25 px-7.5 pb-11.75 hover:scale-105 transition-transform duration-300 text-center"
                     style={{
                       filter: 'drop-shadow(5px 4px 4px rgba(217, 236, 255, 0.5))',
                     }}>
                     <div className="mb-4">
                       <img src={category.icon} alt={category.title} className="w-12 h-12 mx-auto object-cover" />
                     </div>
-                    <h3 className="text-[25px] text-[#324361] font-saira font-semibold leading-[35px] mb-2">
+                    <h3 className="text-[25px] text-[#324361] font-saira font-semibold leading-8.75 mb-2">
                       {category.title}
                     </h3>
                     <p className="text-[#6B7280] text-sm">{category.courses} Courses</p>
