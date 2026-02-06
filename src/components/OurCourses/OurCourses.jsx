@@ -28,11 +28,11 @@ function OurCourses() {
 
   return (
     <>
-      <section className='bg-gradient-to-br from-[#084FC7] to-[#7F56D9] pt-12 sm:pt-16 md:pt-20 pb-20 sm:pb-28 md:pb-36 relative overflow-hidden'>
+      <section className='bg-linear-to-br from-[#084FC7] to-[#7F56D9] pt-12 sm:pt-16 md:pt-20 pb-20 sm:pb-28 md:pb-36 relative overflow-hidden'>
         <div className='container mx-auto px-4 sm:px-6 lg:px-8'>
           {/* Header Section */}
           <div className='flex flex-col justify-center items-center pb-12 sm:pb-16 md:pb-20'>
-            <h3 className='text-3xl sm:text-4xl md:text-[45px] text-white font-rowdies font-bold leading-tight sm:leading-[3.5rem] md:leading-[3.75rem] text-center pb-4 sm:pb-6 md:pb-7 px-4'>
+            <h3 className='text-3xl sm:text-4xl md:text-[45px] text-white font-rowdies font-bold leading-tight sm:leading-14 md:leading-15 text-center pb-4 sm:pb-6 md:pb-7 px-4'>
               Why <span className='text-[#4BE5CA]'>learn</span> with our courses?
             </h3>
             <p className='text-base sm:text-lg md:text-xl lg:text-[25px] text-white/90 leading-relaxed sm:leading-7 md:leading-8 lg:leading-8.75 font-normal font-saira text-center max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-4xl px-4'>
