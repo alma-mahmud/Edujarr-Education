@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { FiShoppingBag, FiSearch, FiChevronDown } from "react-icons/fi";
 import { FaRegCircleUser } from "react-icons/fa6";
-import { RiMenu3Fill } from "react-icons/ri"; // মেনু আইকন
-import { RxCross2 } from "react-icons/rx";    // ক্লোজ আইকন
+import { RiMenu3Fill } from "react-icons/ri"; // menu Icon
+import { RxCross2 } from "react-icons/rx";    // Close Icon
 import logo from '../../assets/Images/Main-logo/logo.png'
 
 const Navbar = () => {
@@ -36,7 +36,7 @@ const Navbar = () => {
           </div>
           <div className="nav_btn capitalize font-medium font-saira text-xl flex items-center">
             <button className="login py-5 px-9 underline">login</button>
-            <button className="signup py-5 px-9 bg-linear-to-br from-[#083f9b] to-[#7f56d9] text-white rounded-lg">
+            <button className="signup py-5 px-9 font-saira bg-linear-to-br from-[#083f9b] to-[#7f56d9] text-white rounded-lg">
               signup
             </button>
           </div>
@@ -58,17 +58,15 @@ const Navbar = () => {
         ></div>
 
         {/* মেনু স্লাইডার ডিভ (Sidebar Content) */}
-        <div className={`relative h-full w-[70%] bg-[#6e48ff] p-10 flex flex-col gap-8 shadow-2xl transition-transform duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] ${
+        <div className={`relative h-full w-[70%] bg-gradient-to-br from-[#0f3460] via-[#5b21b6] to-[#8b5cf6] p-10 flex flex-col gap-8 font-saira shadow-2xl transition-transform duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] ${
           isOpen ? "translate-x-0" : "translate-x-full"}`}>
           
           {/* ক্লোজ আইকন - এটি ট্যাপ করলে সামান্য ঘুরবে */}
           <div className="flex justify-end">
-            <RxCross2 
-              className={`text-white text-4xl cursor-pointer transition-transform duration-500 ${
-                isOpen ? "rotate-0" : "rotate-90"
-              }`} 
-              onClick={() => setIsOpen(false)} 
-            />
+              <RxCross2 
+                className={`text-white text-4xl cursor-pointer transition-all duration-500 ease-in-out hover:rotate-180 hover:scale-125 active:scale-90`} 
+                onClick={() => setIsOpen(false)} 
+              />
           </div>
 
           {/* Menu Links */}

@@ -65,7 +65,7 @@ const Banner = () => {
               </div>
               <div className="main flex flex-col gap-y-2 text-white text-left">
                 <p className="title font-rowdies text-lg">Ronald Richards</p>
-                <h2 className="description font-saira text-sm opacity-90 leading-relaxed">
+                <h2 className="description font-saira text-sm opacity-90 leading-[24px]">
                   In a coaching role, you ask the questions and rely more on your 
                   staff, who become the experts, to provide the information.
                 </h2>

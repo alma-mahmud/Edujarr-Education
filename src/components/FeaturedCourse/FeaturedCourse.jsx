@@ -84,6 +84,11 @@ function FeaturedCourse() {
                     ))
                 }
             </div>
+            <div className='flex justify-center pt-10 lg:pt-27'>
+                <button className="signup py-5 px-9 bg-linear-to-br from-[#083f9b] to-[#7f56d9] text-white rounded-lg font-saira ">
+              Explore courses
+            </button>
+            </div>
         </div>
     </section>
     </>
