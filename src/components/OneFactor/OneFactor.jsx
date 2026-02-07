@@ -33,7 +33,7 @@ function OneFactor() {
               cupidatat non proident, sunt in culpa qui officia deserunt mollit
               anim id est laborum.
             </p>
-            <button className="signup py-3 px-6 lg:py-4 lg:px-7.5 font-saira bg-gradient-to-br from-[#083f9b] to-[#7f56d9] text-white rounded-lg hover:opacity-90 transition-opacity">
+            <button className="signup py-3 px-6 lg:py-4 lg:px-7.5 font-saira bg-linear-to-br from-[#083f9b] to-[#7f56d9] text-white rounded-lg hover:opacity-90 transition-opacity">
               Learn More
             </button>
           </div>

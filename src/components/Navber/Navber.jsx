@@ -58,7 +58,7 @@ const Navbar = () => {
         ></div>
 
         {/* মেনু স্লাইডার ডিভ (Sidebar Content) */}
-        <div className={`relative h-full w-[70%] bg-gradient-to-br from-[#0f3460] via-[#5b21b6] to-[#8b5cf6] p-10 flex flex-col gap-8 font-saira shadow-2xl transition-transform duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] ${
+        <div className={`relative h-full w-[70%] bg-linear-to-br from-[#0f3460] via-[#5b21b6] to-[#8b5cf6] p-10 flex flex-col gap-8 font-saira shadow-2xl transition-transform duration-500 ease-in-out ${
           isOpen ? "translate-x-0" : "translate-x-full"}`}>
           
           {/* ক্লোজ আইকন - এটি ট্যাপ করলে সামান্য ঘুরবে */}
