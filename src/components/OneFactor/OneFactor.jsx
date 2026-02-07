@@ -1,10 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Factor from '../../assets/Images/One-Factor/factor.png'
 import factorBottom from '../../assets/Images/One-Factor/onefactor.png'
 import factorRight from '../../assets/Images/One-Factor/onefactor1.png'
 import factormedal from '../../assets/Images/One-Factor/onefactor2.png'
 
 function OneFactor() {
+  const [showVideo, setShowVideo] = useState(false);
   return (
     <>
       <section className='py-16 lg:py-32.5 max-w-392.5 mx-auto px-6 lg:px-4 relative overflow-hidden'>
@@ -52,16 +53,62 @@ function OneFactor() {
           </div>
         </div>
       </section>
-      <section className='pb-20 relative'>
-          <div className='relative'>
-          <img src={factorBottom} className='mx-auto' alt="" />
-          <img src={factormedal} className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2' alt="" />
-        </div>
-        <div>
-          <img src={factorRight} className='absolute bottom-20 right-18.5' alt="" />
-        </div>
-        
+    <section className='pb-10 sm:pb-16 lg:pb-20'>
+          <div className='px-4 sm:px-6 lg:px-0'>
+            <div className='relative mx-auto w-full max-w-xs sm:max-w-md md:max-w-lg lg:max-w-2xl xl:max-w-4xl'>
+              <img src={factorBottom} className='w-full' alt="" />
+              
+              {/* Medal click e video open hobe */}
+              <img 
+                src={factormedal} 
+                className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 cursor-pointer hover:scale-110 transition-transform w-16 sm:w-20 md:w-24 lg:w-28 xl:w-32' 
+                alt="Play Video"
+                onClick={() => setShowVideo(true)}
+              />
+              
+              {/* factorRight image - factorBottom er bottom-right corner e */}
+              <img 
+                src={factorRight} 
+                className='hidden lg:block absolute bottom-0 right-0 w-48 xl:w-56' 
+                alt="" 
+              />
+            </div>
+          </div>
       </section>
+
+{/* Video Modal */}
+{showVideo && (
+  <div 
+    className='fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50 p-4'
+    onClick={() => setShowVideo(false)}
+  >
+    <div 
+      className='relative w-full max-w-sm sm:max-w-md md:max-w-2xl lg:max-w-4xl xl:max-w-6xl'
+      onClick={(e) => e.stopPropagation()}
+    >
+      {/* Close Button */}
+      <button 
+        className='absolute -top-8 sm:-top-10 md:-top-12 right-0 text-white text-2xl sm:text-3xl md:text-4xl font-bold hover:text-red-500 transition-colors'
+        onClick={() => setShowVideo(false)}
+      >
+        ✕
+      </button>
+      
+      {/* YouTube Video */}
+      <div className='relative pb-[56.25%] rounded-lg overflow-hidden'>
+        <iframe 
+          className='absolute top-0 left-0 w-full h-full shadow-2xl'
+          src="https://www.youtube.com/embed/xnNmEe5QHq4?si=tE6G69-ghIQMng1R&autoplay=1" 
+          title="YouTube video player" 
+          frameBorder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+          referrerPolicy="strict-origin-when-cross-origin" 
+          allowFullScreen
+        />
+      </div>
+    </div>
+  </div>
+)}
     </>
   )
 }
