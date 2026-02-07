@@ -6,6 +6,7 @@ import OurCourses from './components/ourCourses/ourCourses'
 import TopCategories from './components/TopCategories/TopCategories'
 import OneFactor from './components/OneFactor/OneFactor'
 import Testimonials from './components/Testimonials/Testimonials'
+import Footer from './components/Footer/Footer'
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
     <TopCategories></TopCategories>
     <OneFactor></OneFactor>
     <Testimonials></Testimonials>
+    <Footer></Footer>
     </>
   )
 }

@@ -48,7 +48,7 @@ function TopCategories() {
 
   return (
     <>
-      <section className='bg-gradient-to-b from-white to-[#D9ECFF] pb-20 pt-20'>
+      <section className='bg-linear-to-b from-white to-[#D9ECFF] pb-20 pt-20'>
         <div className='text-center'>
           <h3 className='text-3xl sm:text-4xl md:text-[45px] text-[#323232] font-rowdies font-bold leading-7.5 sm:leading-14 md:leading-15 text-center pb-4 sm:pb-6 md:pb-7 px-4'>
             Top <span className='text-[#2AAA94]'>Categories</span>
