@@ -38,7 +38,7 @@ function Testimonials() {
                 <h3 className='text-[#2AAA94] text-[30px] lg:text-[45px] font-rowdies leading-13.75 font-bold'>Testimonials</h3>
                 <p className='text-[#4E596B] text-[18px] lg:text-[25px] font-saira font-medium leading-10 pb-10 lg:pb-22.75'>What our student say about us</p>
             </div>
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6 max-w-[1624px] mx-auto'>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6 max-w-406 mx-auto'>
   {testimonialsData.map((testimonial, index) => (
     <div 
       key={testimonial.id} 
@@ -54,12 +54,12 @@ function Testimonials() {
           alt={testimonial.name}
           className='w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 rounded-full object-cover transition-transform duration-300 hover:scale-110'
         />
-        <h3 className='text-lg sm:text-xl lg:text-2xl font-bold text-gray-800'>
+        <h3 className='text-lg sm:text-xl lg:text-2xl font-rowdies leading-7 font-bold text-gray-800'>
           {testimonial.name}
         </h3>
       </div>
       
-      <p className='text-gray-600 text-sm sm:text-base mb-4 leading-relaxed'>
+      <p className='text-gray-600 sm:text-[16px] lg:text-[18px] mb-4 font-saira leading-7 pb-5'>
         {testimonial.text}
       </p>
       
