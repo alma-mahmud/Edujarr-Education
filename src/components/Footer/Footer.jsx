@@ -6,12 +6,12 @@ import footerLogo from '../../assets/Images/Main-logo/footer.png'
 function Footer() {
   return (
     <>
-    <footer className='bg-gradient-to-b from-[#331DA8] to-[#865AEF] pt-16 sm:pt-20 lg:pt-25 px-4 sm:px-6 lg:px-8'>
-  <div className='max-w-[1624px] mx-auto'>
-    <div className='flex flex-col lg:flex-row gap-8 sm:gap-10 lg:gap-20 xl:gap-[140px] justify-between'>
+    <footer className='bg-linear-to-b from-[#331DA8] to-[#865AEF] pt-16 sm:pt-20 lg:pt-25 px-4 sm:px-6 lg:px-8'>
+  <div className='max-w-406 mx-auto'>
+    <div className='flex flex-col lg:flex-row gap-8 sm:gap-10 lg:gap-20 xl:gap-35 justify-between'>
       
       {/* Logo & Description */}
-      <div className="w-full lg:max-w-[477px]">
+      <div className="w-full lg:max-w-119.25">
         <img src={footerLogo} alt="Edujarr Logo" className='mb-5 sm:mb-6 lg:mb-7 w-32 sm:w-36 lg:w-auto' />
         <p className='text-white text-base sm:text-lg font-saira leading-6 sm:leading-7'>
           Veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
@@ -19,7 +19,7 @@ function Footer() {
       </div>
 
       {/* Quick Links */}
-      <div className="w-full sm:w-auto sm:min-w-[205px]">
+      <div className="w-full sm:w-auto sm:min-w-51.25">
         <h3 className='text-white text-xl sm:text-2xl font-rowdies font-bold mb-5 sm:mb-6 lg:mb-8'>
           Quick Links
         </h3>
@@ -40,7 +40,7 @@ function Footer() {
       </div>
 
       {/* Contact Us */}
-      <div className="w-full lg:min-w-[389px]">
+      <div className="w-full lg:min-w-97.25">
         <h3 className='text-white text-xl sm:text-2xl font-rowdies font-bold mb-5 sm:mb-6 lg:mb-8'>
           Contact us
         </h3>
@@ -50,7 +50,7 @@ function Footer() {
           <div className='flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 lg:gap-8'>
             {/* Phone */}
             <div className='flex items-center gap-2 sm:gap-3'>
-              <IoCall className='text-white text-lg sm:text-xl flex-shrink-0' />
+              <IoCall className='text-white text-lg sm:text-xl shrink-0' />
               <a 
                 href="tel:2095550104" 
                 className='text-white text-sm sm:text-base lg:text-lg font-saira hover:text-gray-200 transition-colors break-all sm:break-normal'
@@ -61,7 +61,7 @@ function Footer() {
 
             {/* Email */}
             <div className='flex items-center gap-2 sm:gap-3'>
-              <MdEmail className='text-white text-lg sm:text-xl flex-shrink-0' />
+              <MdEmail className='text-white text-lg sm:text-xl shrink-0' />
               <a 
                 href="mailto:michelle.rivera@example.com" 
                 className='text-white text-sm sm:text-base lg:text-lg font-saira hover:text-gray-200 transition-colors break-all sm:break-normal'
@@ -73,7 +73,7 @@ function Footer() {
 
           {/* Address */}
           <div className='flex items-start gap-2 sm:gap-3'>
-            <MdLocationOn className='text-white text-lg sm:text-xl mt-1 flex-shrink-0' />
+            <MdLocationOn className='text-white text-lg sm:text-xl mt-1 shrink-0' />
             <p className='text-white text-sm sm:text-base lg:text-lg font-saira leading-6 sm:leading-7'>
               2715 Ash Dr. San Jose, South Dakota 83475
             </p>
