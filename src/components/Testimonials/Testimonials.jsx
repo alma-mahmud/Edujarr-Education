@@ -38,39 +38,39 @@ function Testimonials() {
                 <p className='text-[#4E596B] text-[18px] lg:text-[25px] font-saira font-medium leading-10'>What our student say about us</p>
             </div>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-5'>
-  {testimonialsData.map((testimonial) => (
-    <div 
-      key={testimonial.id} 
-      className='bg-white rounded-3xl p-6 lg:p-8 max-w-[406px] mx-auto w-full'
-      style={{ filter: 'drop-shadow(0px 4px 35px #FFFFFF)' }}
-    >
-      <div className='flex items-center gap-4 mb-4'>
-        <img 
-          src={testimonial.image} 
-          alt={testimonial.name}
-          className='w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 rounded-full object-cover'
-        />
-        <h3 className='text-lg sm:text-xl lg:text-2xl font-bold text-gray-800'>
-          {testimonial.name}
-        </h3>
-      </div>
-      
-      <p className='text-gray-600 text-sm sm:text-base mb-4 leading-relaxed'>
-        {testimonial.text}
-      </p>
-      
-      <div className='flex gap-1'>
-        {[...Array(5)].map((_, index) => (
-          index < testimonial.rating ? (
-            <IoIosStar key={index} className='text-yellow-400 text-lg sm:text-xl' />
-          ) : (
-            <IoIosStarOutline key={index} className='text-yellow-400 text-lg sm:text-xl' />
-          )
-        ))}
-      </div>
-    </div>
-  ))}
-</div>
+                {testimonialsData.map((testimonial) => (
+                  <div 
+                    key={testimonial.id} 
+                    className='bg-white rounded-3xl p-6 lg:p-8 max-w-101.5 mx-auto w-full'
+                    style={{ filter: 'drop-shadow(0px 4px 35px #FFFFFF)' }}
+                  >
+                    <div className='flex items-center gap-4 mb-4'>
+                      <img 
+                        src={testimonial.image} 
+                        alt={testimonial.name}
+                        className='w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 rounded-full object-cover'
+                      />
+                      <h3 className='text-lg sm:text-xl lg:text-2xl font-bold text-gray-800'>
+                        {testimonial.name}
+                      </h3>
+                    </div>
+                    
+                    <p className='text-gray-600 text-sm sm:text-base mb-4 leading-relaxed'>
+                      {testimonial.text}
+                    </p>
+                    
+                    <div className='flex gap-1'>
+                      {[...Array(5)].map((_, index) => (
+                        index < testimonial.rating ? (
+                          <IoIosStar key={index} className='text-yellow-400 text-lg sm:text-xl' />
+                        ) : (
+                          <IoIosStarOutline key={index} className='text-yellow-400 text-lg sm:text-xl' />
+                        )
+                      ))}
+                    </div>
+                  </div>
+                ))}
+            </div>
         </div>
     </section>
     </>

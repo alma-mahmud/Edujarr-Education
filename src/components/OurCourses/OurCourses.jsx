@@ -29,7 +29,9 @@ function OurCourses() {
   return (
     <>
       <section className='bg-linear-to-br  from-[#084FC7] to-[#7F56D9] pt-12 sm:pt-16 md:pt-20 pb-20 sm:pb-28 md:pb-36 relative overflow-hidden'>
-        <img className=' rotate-90 absolute left-[-100px] ' src={banner} alt="" />
+        <div className=''>
+          <img className=' rotate-90 absolute -left-25 hidden lg:block' src={banner} alt="" />
+        </div>
         <div className='container mx-auto px-4 sm:px-6 lg:px-8'>
           {/* Header Section */}
           <div className='flex flex-col justify-center items-center pb-12 sm:pb-16 md:pb-20'>
