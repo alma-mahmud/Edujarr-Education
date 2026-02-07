@@ -1,5 +1,8 @@
 import React from 'react'
 import Factor from '../../assets/Images/One-Factor/factor.png'
+import factorBottom from '../../assets/Images/One-Factor/onefactor.png'
+import factorRight from '../../assets/Images/One-Factor/onefactor1.png'
+import factormedal from '../../assets/Images/One-Factor/onefactor2.png'
 
 function OneFactor() {
   return (
@@ -8,7 +11,7 @@ function OneFactor() {
         <div className='flex flex-col lg:flex-row gap-12 lg:gap-32.5 items-center'>
           
           {/* Image wrapper */}
-          <div className='w-full max-w-[300px] md:max-w-[400px] lg:w-100 shrink-0'> 
+          <div className='w-full max-w-75 md:max-w-100 lg:w-100 shrink-0'> 
               <img src={Factor} alt="Factor" className='w-full h-auto object-contain' />
           </div>
           
@@ -26,7 +29,7 @@ function OneFactor() {
           </div>
 
           {/* Real rounded triangle - Optimized positioning */}
-          <div className='absolute -bottom-10 -right-10 lg:bottom-3 lg:right-50 -z-50 opacity-50 lg:opacity-100'>
+          <div className='absolute -bottom-10 -right-10 lg:bottom-3 lg:right-50 -z-50 opacity-0 lg:opacity-100'>
               <svg width="119" height="119" viewBox="0 0 119 119">
                   <defs>
                       <filter id="round">
@@ -48,6 +51,16 @@ function OneFactor() {
               </svg>
           </div>
         </div>
+      </section>
+      <section className='pb-20 relative'>
+          <div className='relative'>
+          <img src={factorBottom} className='mx-auto' alt="" />
+          <img src={factormedal} className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2' alt="" />
+        </div>
+        <div>
+          <img src={factorRight} className='absolute bottom-20 right-18.5' alt="" />
+        </div>
+        
       </section>
     </>
   )
