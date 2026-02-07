@@ -5,6 +5,7 @@ import FeaturedCourse from './components/FeaturedCourse/FeaturedCourse'
 import OurCourses from './components/ourCourses/ourCourses'
 import TopCategories from './components/TopCategories/TopCategories'
 import OneFactor from './components/OneFactor/OneFactor'
+import Testimonials from './components/Testimonials/Testimonials'
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
     <OurCourses></OurCourses>
     <TopCategories></TopCategories>
     <OneFactor></OneFactor>
+    <Testimonials></Testimonials>
     </>
   )
 }
